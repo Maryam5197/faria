@@ -1,42 +1,53 @@
 "use client";
+
 import React from "react";
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center bg-gray-100 p-8">
-      
-      {/* Top Heading Center */}
-      <h1 className="text-4xl font-bold text-blue-600 mb-10 text-center">
-        Maryam
-      </h1>
-
-      {/* Content Section */}
-      <div className="flex flex-col md:flex-row items-center gap-8 bg-white shadow-lg rounded-xl p-6 max-w-4xl w-full">
+    <div className="w-full h-screen bg-gray-100 flex items-center justify-center">
+      <div className="w-full h-full bg-white rounded-none shadow-lg flex flex-col">
         
-        {/* Left Side Picture */}
-        <img
-          src="/images/maryam.png"   // 👈 apni pic yahan save karein
-          alt="Maryam"
-          className="w-56 h-56 object-cover rounded-full border-4 border-blue-500 shadow-md"
-        />
+        {/* Top Thin Border */}
+        <div
+          className="w-full border-t border-gray-400"
+          style={{ borderWidth: "0.5px" }}
+        ></div>
 
-        {/* Right Side Authentic Intro */}
-        <div className="text-center md:text-left space-y-3">
-          <p className="text-gray-700 text-lg">
-            Hello! My name is <span className="font-semibold">Maryam</span>. I have a strong
-            interest in technology and enjoy learning how modern websites and
-            applications are built.
-          </p>
-          <p className="text-gray-700 text-lg">
-            Currently, I am practicing <span className="font-semibold">Next.js 15, Tailwind CSS, 
-            and TypeScript</span> to improve my development skills. My goal is to
-            create clean, responsive, and user-friendly web projects.
-          </p>
-          <p className="text-gray-700 text-lg">
-            This project is a simple example that highlights my journey in web
-            development, and I look forward to building more advanced projects
-            in the future.
-          </p>
+        {/* Pic + Name Row */}
+        <div className="relative flex items-center justify-center mt-4">
+          {/* Pic Left (slightly lower than border) */}
+          <div className="absolute left-8 top-2">
+            <img
+              src="/mypic.jpg" // apni image ko public/mypic.jpg me daalein
+              alt="Maryam"
+              className="w-20 h-20 rounded-full object-cover border border-pink-400"
+            />
+          </div>
+
+          {/* Name Center */}
+          <h1 className="text-4xl font-bold text-gray-800">Maryam</h1>
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-gray-300 mt-6"></div>
+
+        {/* Bottom (Paragraphs with thick border) */}
+        <div className="flex-1 flex items-center justify-center p-8 text-center border-t-4 border-gray-500 mt-4">
+          <div className="max-w-3xl">
+            <p className="text-gray-700 text-lg leading-relaxed mb-6">
+              I am Maryam, a student who is passionate about exploring new
+              technologies and creating creative web projects. This project is
+              built with{" "}
+              <span className="font-semibold text-pink-500">
+                Next.js 15, Tailwind CSS, and TypeScript
+              </span>{" "}
+              without any extra libraries.
+            </p>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              My aim is to practice programming, build responsive websites, and
+              improve my skills through real-world projects.
+            </p>
+          </div>
         </div>
       </div>
     </div>
